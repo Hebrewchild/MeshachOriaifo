@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+    }
+    .delay-100 { animation-delay: 0.2s; }
+    .delay-200 { animation-delay: 0.4s; }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+    /* For sticky navbar shadow */
+    nav.sticky-nav {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      backdrop-filter: saturate(180%) blur(20px);
+      background-color: rgba(15, 23, 42, 0.8);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 sticky-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-6">
+          <a href="#landing" class="text-xl font-bold text-blue-400 hover:text-blue-500">MO</a>
+          <div class="hidden md:flex space-x-4 text-gray-300">
+            <a href="#landing" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="#about" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+            <a href="#skills" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+            <a href="#projects" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Portfolio/Projects</a>
+            <a href="#services" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+            <a href="/resume.pdf" download class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+            <a href="#contact" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Contact Me</a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" aria-label="Toggle menu" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-2 pb-3 space-y-1 bg-gray-900">
+      <a href="#landing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-blue-400">Landing Page</a>
+      <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-blue-400">About Me</a>
+      <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-blue-400">Skills</a>
+      <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-blue-400">Portfolio/Projects</a>
+      <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-blue-400">Services</a>
+      <a href="/resume.pdf" download class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-blue-400">Resume</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-blue-400">Contact Me</a>
+    </div>
+  </nav>
+
+  <!-- LANDING PAGE -->
+  <section id="landing" class="min-h-screen flex items-center justify-center text-center px-4">
+    <div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 animate-fadeIn">
+        Hello, I'm <span class="text-blue-500">Meshach Oriaifo</span>
+      </h1>
+      <p class="text-lg sm:text-xl max-w-2xl mx-auto text-gray-300 animate-fadeIn delay-100">
+        A Digital Solutions Expert | IT Administrator | Creative Designer | Project Manager
+      </p>
+      <p>+234 8153533384</p>
+      <p>email: meshachbloginfo@gmail.com</p>
+      <a href="#about" class="inline-block mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-xl transition duration-300 animate-fadeIn delay-200">
+        Learn More About Me
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about" class="py-16 px-4 bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">About Me</h2>
+      <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
+        I am a seasoned professional with expertise in IT system administration, creative design, and digital solutions. With over 20 years of experience, I’ve led and delivered solutions across education, faith-based organizations, and private sectors. I specialize in Graphic design, media production, project management, and technical support. I solve problems.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-16 px-4 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-blue-400">Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-gray-300">
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4 border-b border-blue-600 pb-2">IT Solutions</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Software Development</li>
+            <li>Computer Purchase/Repairs</li>
+            <li>CCTV</li>
+            <li>Networking</li>
+            <li>Satellite Dish Installation</li>
+            <li>Solar Panel</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4 border-b border-blue-600 pb-2">Media & Content Creation</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Video Editing</li>
+            <li>Video Coverage</li>
+            <li>Training</li>
+            <li>Facilitation</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4 border-b border-blue-600 pb-2">Graphics Design & Printing</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Fliers, Banners, Flex</li>
+            <li>Branding</li>
+            <li>Calendars, Jotters, etc</li>
+          </ul>
+          
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 border-b border-blue-600 pb-2">Author</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>A Country Under the Scribes and Pharisees</li>
+            <li>Lust on the Wheel</li>
+            <li>God in Your Limit</li>
+            <li>Distinctive Youth</li>
+            <li>etc</li>
+          </ul>
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT GALLERY -->
+  <section id="projects" class="py-16 px-4 bg-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-blue-400">Portfolio/Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+          <img src="gofindme.JPG" alt="Project 1" class="w-full h-48 object-cover" />
+          <div class="p-4 bg-gray-700">
+            <h3 class="text-xl font-semibold mb-2">Project One</h3>
+            <p class="text-gray-300">Editted a video for Student that won first place</p>
+            <a href="https://youtu.be/aXwxMrVfgLQ?feature=shared">Technovation Challenge 2023 Pitch Video || Team Savvy Girls - GO FIND ME</a>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+          <img src="author2.jpg" alt="Project 2" class="w-full h-48 object-cover" />
+          <div class="p-4 bg-gray-700">
+            <h3 class="text-xl font-semibold mb-2">Books on the Shelf</h3>
+            <p class="text-gray-300">As an Auhtor, I have written these book:</p><br>
+            <a href="https://selar.com/278b44">1. A Country Under Scribes and Pharisees</a>
+            <br><a href="">2. Lust on the Wheel</a>
+            <br><a href="">3. God in your Limit</a>
+            <br><a href="">4. Creating your World by Faith</a>
+            <br><a href="">2. The Life Therapies</a>
+            <br><a href="https://www.amazon.com/dp/B0CFB4VSTT">4. The Distinctive Youth</a>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+          <img src="des.jpg" alt="Project 2" class="w-full h-48 object-cover" />
+          <div class="p-4 bg-gray-700">
+            <h3 class="text-xl font-semibold mb-2">Designs that displays your Products</h3>
+            
+            
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+          <img src="dish.jpg" alt="Project 2" class="w-full h-48 object-cover" />
+          <div class="p-4 bg-gray-700">
+            <h3 class="text-xl font-semibold mb-2">Satellite Dish Installation <br>(Paid and Ftree to Air)</h3>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-16 px-4 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-blue-400">Services</h2>
+      <ul class="text-gray-300 space-y-4 text-lg">
+        <li>IT System Administration & Support</li>
+        <li>Custom Software Development</li>
+        <li>Media Production & Video Editing</li>
+        <li>Graphic Design & Branding</li>
+        <li>Training & Facilitation</li>
+        <li>Project Management Consulting</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 px-4 bg-gray-800">
+    <div class="max-w-md mx-auto bg-gray-900 p-8 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold mb-6 text-blue-400 text-center">Contact Me</h2>
+      <form action="https://formspree.io/f/xqaqrzry" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block mb-2 font-semibold text-gray-300">Name</label>
+          <input type="text" name="name" id="name" required
+            class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+        <div>
+          <label for="email" class="block mb-2 font-semibold text-gray-300">Email</label>
+          <input type="email" name="email" id="email" required
+            class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+        <div>
+          <label for="message" class="block mb-2 font-semibold text-gray-300">Message</label>
+          <textarea name="message" id="message" rows="4" required
+            class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-md text-white font-semibold transition duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+<footer class="bg-gray-900 text-gray-300 pt-10 pb-6 mt-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
+      <div>
+        <h2 class="text-xl font-bold text-white mb-2">Meshach Oriaifo</h2>
+        <p class="text-sm">Empowering solutions through IT, Media, and Design.</p>
+      </div>
+      <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0">
+        <a href="#landing" class="hover:text-blue-400 transition">Home</a>
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a>
+        <a href="#services" class="hover:text-blue-400 transition">Services</a>
+        <a href="assets/resume.pdf" target="_blank" class="hover:text-blue-400 transition">Resume</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+      </div>
+      <div class="flex space-x-4">
+        <!-- Replace # with your social links -->
+        <!-- Facebook -->
+<a href="https://www.facebook.com/meshach.oriaifo" target="_blank" aria-label="Facebook" class="hover:text-blue-500 transition">
+  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+    <path d="M22.675 0h-21.35C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.919.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+  </svg>
+</a>
+
+        <a href="https://www.linkedin.com/in/meshach-oriaifo-digital-solution-expert-29509095?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn" class="hover:text-blue-400 transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 24h5V8H0v16zM7.5 8H12v2.34h.08c.62-1.18 2.14-2.42 4.4-2.42 4.7 0 5.57 3.1 5.57 7.13V24h-5V15.3c0-2.07-.04-4.73-2.88-4.73-2.89 0-3.33 2.26-3.33 4.58V24h-5V8z"/></svg>
+        </a>
+        <a href="https://github.com/Hebrewchild" target="_blank"  aria-label="GitHub" class="hover:text-blue-400 transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.17C6.28 21.13 5.5 19.29 5.5 19.29c-.54-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.8 1.31 3.49 1 .11-.77.42-1.31.76-1.61-3.05-.35-6.26-1.52-6.26-6.75 0-1.49.53-2.7 1.4-3.64-.14-.35-.6-1.77.13-3.69 0 0 1.15-.37 3.75 1.4 1.09-.3 2.25-.45 3.41-.45s2.32.15 3.41.45c2.6-1.77 3.75-1.4 3.75-1.4.73 1.92.27 3.34.13 3.69.87.94 1.4 2.15 1.4 3.64 0 5.24-3.21 6.4-6.26 6.75.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="mt-6 text-center text-sm text-gray-500">
+      &copy; 2025 Meshach Oriaifo. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
